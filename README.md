@@ -1,11 +1,9 @@
 # Selenium Automation Framework(with Java)
-Author  - Pramod Dutta
-Website - https:/sdet.live
-
+Author  - Swathi T
 ### Tech Stack of Web Automation
 
-1. Programming - Java ( JDK > 22, IntelliJ)
-2. User Interactions, browser Automation Selenium
+1. Programming - Java ( JDK > 21, IntelliJ)
+2. User Interactions, Browser Automation Selenium
 3. Test Framework -> TestNG
 4. Build Management ->  Maven
 5. Reporting - Allure Report, Extent Report.
