@@ -3,11 +3,6 @@ package com.thetestingacademy.pages.pageObjectModel;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class LoginPage_POM {
 
@@ -68,7 +63,7 @@ public class LoginPage_POM {
         String error_msg_attribute_dataqa  = error_msg.getAttribute("data-qa");
         return error_msg_text;
 
-        // This type of creation is not recommended  just for example
+        // This type of creation is not recommended  just for example we must use web driver wait
 
         // using this class we can create a testcase under tests as TestVWOLogin_POM
     }

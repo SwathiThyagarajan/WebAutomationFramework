@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n"/>
+        </Console>
+        <File name="FileLogger" fileName="logs/test.log">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="info">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogger"/>
+        </Root>
+    </Loggers>
+</Configuration>
+
+
+
+
+
+        <!--        This is an XML configuration for a logging system, likely using **Log4j2**,
+        a popular logging framework in Java. Here's a breakdown of the configuration:-->
+
+<!--        ### 1. Root Element:-->
+<!--        - `<Configuration status="WARN">`:-->
+<!-- - **status="WARN"**: This defines the logging level for internal Log4j2 messages.
+ Log4j2 itself can log its status during initialization.
+  `WARN` means it will log warning messages and above (i.e., error, fatal).-->
+
+<!--### 2. Appenders:-->
+<!--These define where and how the log messages are output.-->
+
+<!-- - **Console Appender**:-->
+<!-- - `<Console name="Console" target="SYSTEM_OUT">`:-->
+<!--    This appender outputs log messages to the console (standard output).-->
+<!--    - `<PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1} - %m%n"/>`:-->
+<!--    This defines the pattern for log messages:-->
+<!--    - `%d{yyyy-MM-dd HH:mm:ss}`: Date and time (in the format `yyyy-MM-dd HH:mm:ss`).-->
+<!--    - `%-5p`: Log level (INFO, WARN, etc.), left-padded to 5 characters.-->
+<!--    - `%c{1}`: Logger's class name (only the last part of the class name).-->
+<!--    - `- %m`: The log message.-->
+<!--    - `%n`: New line at the end of the log message.-->
+
+<!--    - **File Appender**:-->
+<!--    - `<File name="FileLogger" fileName="logs/test.log">`:-->
+<!--        This appender logs to a file located at `logs/test.log`.-->
+<!--        - Same pattern layout is used for this appender as for the Console appender.-->
+
+<!--        ### 3. Loggers:-->
+<!--        Loggers define what levels of logging are allowed and which appenders are used.-->
+
+<!--        - **Root Logger**:-->
+<!--        - `<Root level="info">`:-->
+<!--            The root logger is set to the `info` level, meaning it will log messages at the `info` level
+             and above (e.g., warn, error).-->
+<!--            - `<AppenderRef ref="Console"/>`:-->
+<!--            Refers to the Console appender, meaning logs will be printed to the console.-->
+<!--            - `<AppenderRef ref="FileLogger"/>`:-->
+<!--            Refers to the FileLogger appender, meaning logs will be written to the file `logs/test.log`.-->
+
+<!--            ### Summary:-->
+<!--            - Logs are output both to the console and to a file (`logs/test.log`).-->
+<!--            - The log pattern includes timestamp, log level, class name, and the actual log message.-->
+<!--            - Only messages at the `info` level and above will be logged.-->
