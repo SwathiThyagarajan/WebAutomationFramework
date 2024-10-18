@@ -178,6 +178,11 @@ Structure
   alternate for log4j is still not found . so check if the vulnerability does not affect then use log4j
   add the dependency  just like log4j core u can add log4j api also
 
+log4j is a logging mechanism to capture the logs, it is a widely used logging framework for java applications
+it is developed by Apache foundation it is open source '
+it acts as a listener previously we used to add testng listener they are complex, nowadays, you can just add
+it will log the logs in the console as a text file
+log4j it is good to go
    log4j file should be created in resource folder name it as log4j2.xml
    in log4j2.xml add the configuration file
    any testcase file u create u must just create the log manager
